@@ -24,7 +24,7 @@ export default function MyHobbies() {
 
     return(
         <>
-        <h1 className='header'>Odin Tobiassen</h1>
+        <h2 className='hobby'> My Hobbies</h2>
         <ul>{listItems}</ul>
         </>
         
