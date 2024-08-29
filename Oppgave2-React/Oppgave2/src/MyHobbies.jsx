@@ -1,6 +1,8 @@
 const hobbies = [
     {title: "utvikling", isFavore: true, upVote: 0, id: 1},
     {title: "Gaming", isFavore: false, upVote: 0, id: 2},
+    {title: "Scouting", isFavore: false, upVote: 0, id: 3},
+    {title: "Dungeons and Dragons", isFavore: false, upVote: 0, id: 4},
 ]
 
 
