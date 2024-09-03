@@ -2,10 +2,10 @@ import {useState} from 'react'
 import './MyHobbies.css'
 
 const hobbies = [
-    {title: "utvikling", isFavore: false, upVote: 0, id: 1},
-    {title: "Gaming", isFavore: true, upVote: 0, id: 2},
-    {title: "Scouting", isFavore: false, upVote: 0, id: 3},
-    {title: "Dungeons and Dragons", isFavore: true, upVote: 0, id: 4},
+    {title: "utvikling", isFavore: true, upVote: 0, id: 1},
+    {title: "Gaming", isFavore: false, upVote: 0, id: 2},
+    {title: "Scouting", isFavore: true, upVote: 0, id: 3},
+    {title: "Dungeons and Dragons", isFavore: false, upVote: 0, id: 4},
 ]
 
 

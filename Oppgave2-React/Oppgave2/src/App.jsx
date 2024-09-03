@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import MyHobbies from './MyHobbies'
 import Profile from './profil'
+import Clock from './clock'
 
 function App() {
  
@@ -11,6 +12,7 @@ function App() {
     <>
     <Profile></Profile>
      <MyHobbies></MyHobbies>
+     <Clock></Clock>
     </>
   )
 }

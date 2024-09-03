@@ -15,7 +15,7 @@ const user = {
     {title: "currently working on React", isFavore: true, upVote: 0, id: 7},
   ]
   
-
+  
 export default function Profile() {
 
     const listItems = skills.map(skills =>
@@ -43,9 +43,9 @@ export default function Profile() {
         }}
         
       />
-        <p className= 'text'> Helloo! My name is Odin. I am studying IT at Drømtorp VGS, and I wish to become an IT-developer in the future.<br/>
-            The biggest current biggest programing projcet I have done, is recreating The Game of Life in JS. <br />
-            Down bellow are a list of skills and programming languages I have learned: </p>
+        <p className= 'text'> Hellooo! My name is Odin. I'm studying IT at Drømtorp VGS, and I wish to become an IT-developer in the future.<br/>
+            The current biggest programing projcet I have done, is making The Game of Life in JS. <br />
+            Down bellow are a list of skills and coding languages I have learned: </p>
 
             <h2 className= 'skills'> My Skills</h2>
         <ul>{listItems}</ul>
