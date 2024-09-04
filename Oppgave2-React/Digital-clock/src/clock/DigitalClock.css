@@ -1,0 +1,15 @@
+.clockContainer {
+    font-size: 35px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.date {
+    font-family: monospace;
+    font-size: 25px;
+}
+
+.clock {
+    font-size: 80px;
+    font-family: monospace;
+    
+}
