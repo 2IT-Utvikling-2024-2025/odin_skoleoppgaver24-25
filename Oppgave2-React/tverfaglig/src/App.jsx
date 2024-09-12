@@ -86,6 +86,16 @@ function App() {
           Neste gang jeg gjør det, vet jeg hvordan jeg skal gjøre det, og det vill bli mye enklere. <br />
           Jeg fikk fint til å endre IP-adresse og endre brannmur regler. <br />
           Jeg fikk til FTP serveren, og å dele filer ved hjelp av FTP.
+          </p>
+
+          <h2>Brukerveiledning til FW </h2>
+          <p>
+          1.	Søk på Firewall i søkefeltet på oppgavelinja. <br /> <br />
+          2.	Åpne Windows Defender Firewall with Advanced Security. <br /> <br />
+          3.	Her inne kan du endre innstillingene på hva slags aktivitet som kan slippes inn, og sendes ut. <br /> <br />
+          4.	For å gjøre det mulig å bruke ping kommandoen, gikk jeg inn på Inbound Rules. <br /> <br />
+          5.	Scrollet ned til F. <br /> <br />
+          6.	Trykket på den øverste «File and Printer Sharing( Echo Request – ICMPv4-In) <br /> <br />
 
           </p>
 
