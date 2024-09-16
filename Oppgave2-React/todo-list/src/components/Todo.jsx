@@ -21,7 +21,6 @@ function AddTask({ onAddTask }) {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        
         <input
           type="text"
           value={taskTitle}
