@@ -10,10 +10,10 @@ function App() {
 
   return (
     <div className = 'container'>
-      <MyQuiz></MyQuiz>
-      {/*<ToDo></ToDo>}
-      {<Converter></Converter>}
-      {<EvenNumber></EvenNumber>*/}
+      {/*<MyQuiz></MyQuiz>*/}
+      <ToDo></ToDo>
+      <Converter></Converter>
+      <EvenNumber></EvenNumber>
       
     </div>
   )
