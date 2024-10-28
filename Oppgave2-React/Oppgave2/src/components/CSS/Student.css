@@ -1,0 +1,15 @@
+.student {
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid white;
+    justify-content: center;
+   
+    
+}
+
+.student_wrapper{
+    width: 30%;
+    padding: 1rem;
+    justify-content: center;
+}
+

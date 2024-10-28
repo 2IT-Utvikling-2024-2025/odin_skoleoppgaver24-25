@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import './profile.css'
+import './CSS/profile.css'
 const user = {
     name: 'Odin Tobiassen',
     imageSrc: 'profile-picture.jpg',

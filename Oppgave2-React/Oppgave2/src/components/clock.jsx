@@ -28,7 +28,7 @@ export default function Clock() {
         <>
         <h3>The clock is:</h3>
         <span>{formatTime()} </span>
-
+        
         </>
         
     )
