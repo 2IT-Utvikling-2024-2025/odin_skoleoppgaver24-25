@@ -10,7 +10,7 @@ export default function ClassList() {
         { name: "Lars", age: 17 },
         { name: "Richelle", age: 16 },
         { name: "Karl", age: 18 },
-        { name: "Max", age: 17 },
+        { name: "Max", age: 19 },
         { name: "Michael", age: 18 },
     ]);
 
