@@ -1,5 +1,6 @@
 const {getAllObjects, addObject, getObjectById, deleteObjectById, updateObjectById} = require('../data/databaseGeneric');
 
+//Get Hent data
 const getAllProducts = async (req, res) => {
     try {
         const products = await getAllObjects();
@@ -10,6 +11,7 @@ const getAllProducts = async (req, res) => {
     }
 };
 
+//Get 
 const getSingleProduct = async (req, res) => {
     try {
         const product = await getObjectById(req.params.id);
@@ -20,6 +22,7 @@ const getSingleProduct = async (req, res) => {
     }
 };
 
+//Post legg til ny data
 const createProduct = async (req, res) => {
     try {
         const {productName, price, description} = req.body;
@@ -31,6 +34,7 @@ const createProduct = async (req, res) => {
     }
 };  
 
+//Put Oppdater data
 const updateProduct = async (req, res) => {
     try {
         const {id} = req.params;
@@ -43,6 +47,7 @@ const updateProduct = async (req, res) => {
     }
 };
 
+//DELETE slett data
 const deleteProduct = async (req, res) => {
     try {
         const {id} = req.params;

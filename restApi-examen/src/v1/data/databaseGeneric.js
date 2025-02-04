@@ -1,7 +1,7 @@
 let objects = [
     { id: 1, productName: 'Xbox360', price: 2500, description: 'A gaming machine'}, 
     { id: 2, productName: 'XboxOne',  price: 2000, description: 'A gaming machine'},
-    { id: 3, productName: 'PS5', price: 5000, description: "A gaming machine" },
+    { id: 3, productName: 'PS5', price: 5000, description: "A gaming machine    " },
     { id: 4, productName: 'Xbox Controller', price: 500, description: 'Xbox Controller'},
     { id: 5, productName: 'PS4 Controller', price: 500, description: 'PS4 Controller'},
 ];
