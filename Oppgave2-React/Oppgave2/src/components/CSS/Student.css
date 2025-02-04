@@ -1,15 +1,21 @@
+.student_wrapper {
+    width: 30%;
+    padding: 1rem;
+    display: flex; 
+    justify-content: center;
+}
+
 .student {
     border-radius: 8px;
     text-align: center;
     border: 2px solid white;
-    justify-content: center;
-   
-    
+    width: 100%; 
+    background-color:darkblue;
+    padding: 1rem; 
 }
 
-.student_wrapper{
-    width: 30%;
-    padding: 1rem;
-    justify-content: center;
+.back-link {
+    margin-top: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
 }
-

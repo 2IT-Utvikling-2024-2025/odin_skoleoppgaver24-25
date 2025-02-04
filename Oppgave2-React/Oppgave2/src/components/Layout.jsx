@@ -6,7 +6,7 @@ export default function Layout() {
         <>
             <nav>
                 <ul>
-                    <li>
+                   {/*<li>
                         <Link to= "/">Home</Link>
                     </li>
                     <li>
@@ -24,7 +24,7 @@ export default function Layout() {
                     
                     <li>
                         <Link to="/list">List</Link>
-                    </li>
+                    </li>*/}
                 </ul>
             </nav>
 
