@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { getAllRouts, getRoutById, createRout, updateRout, deleteRout } = require('../controllers/routsController');
+const { getAllRouts, getRoutById, createRout, updateRout, deleteRout } = require('../controllers/RoutsController');
 
 const router = express.Router();
 
