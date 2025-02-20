@@ -1,9 +1,9 @@
 const express = require('express');
-const RoutRoutes = require('./v1/RoutRoutes');
-const BusRoutes = require('./v1/BusRoutes');
-const UserRoutes = require('./v1/UserRoutes');
-const TicketRoutes = require('./v1/TicketRoutes');
-const WalletRoutes = require('./v1/WalletRoutes');
+const RoutRoutes = require('./v1/routes/RoutRoutes');
+const BusRoutes = require('./v1/routes/BusRoutes');
+const UserRoutes = require('./v1/routes/UserRoutes');
+const TicketRoutes = require('./v1/routes/TicketRoutes');
+const WalletRoutes = require('./v1/routes/WalletRoutes');
 
 
 const app = express();
