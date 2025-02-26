@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const productRoutes = require('./v1/routes/productRoutes');
-//const {pool} = require('./v1/data/db');
 
 app.use(cors());
 app.use(express.json());
