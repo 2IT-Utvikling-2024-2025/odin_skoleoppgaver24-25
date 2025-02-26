@@ -1,35 +1,85 @@
 const express = require('express');
-
 const {pool} = require('../data/db');
-//Next step is to change all these under to add async await.
 
+//GET
 const getAllProducts = async(req, res) => {
     try {
-        //Query the database
-        const [resoult] = await pool.query('SELECT * FROM products');
-        //Response
-        res.state(200).json({success: true, data: resoult});
+        const [resoult] = await pool.execute('SELECT * FROM products');
+
+        res.status(200).json({success: true, data: resoult});
     }
     catch (error) {
-        res.state(500).json({success: false, message: error.message});
+        res.status(500).json({success: false, error: error.message});
     }
 }
 
-const getProductByName = (req, res) => {
-    res.send('Get product by name');
+//GET
+const getProductByName = async (req, res) => {
+    try {
+    const [resoult] = await pool.execute(
+        'SELECT * FROM products WHERE productName = ?',
+        [req.params.name]);
+
+        res.status(200).json({success: true, data: resoult});
+    }
+    catch (error) {
+        res.status(500).json({success: false, error: error.message});
+    }
+    
 }
 
-const createProduct = (req, res) => {
-    res.send('Create product');
+//POST
+const createProduct = async(req, res) => {
+    try {
+        const [resoult] = await pool.execute(
+            'INSERT INTO products (productName, productPrice) VALUES (?, ?)',
+            [req.body.name, req.body.price])
+
+        res.status(200).json({success: true, data: resoult});
+    }
+    catch (error) {
+        res.status(500).json({success: false, error: error.message});
+    }
 }
 
-const updateProduct = (req, res) => {
-    res.send('Update product');
+//PUT
+const updateProduct = async(req, res) => {
+    try {
+        const [resoult] = await pool.execute(
+            'UPDATE products SET productName = ?, productPrice = ? WHERE productId = ?',
+            [req.body.name, req.body.price, req.params.id]);
+
+        if (resoult.affectedRows === 0) {
+            res.status(404).json({success: false, error: 'Product not found'});
+        }
+        else {
+            res.status(200).json({success: true, data: resoult});
+        }
+    }
+    catch (error) {
+        res.status(500).json({success: false, error: error.message});
+    }
 }
 
-const deleteProduct = (req, res) => {
-    res.send('Delete product'); 
+//DELETE
+const deleteProduct = async(req, res) => {
+    try {
+        const [resoult] = await pool.execute(
+            'DELETE FROM products WHERE productId = ?',
+            [req.params.id]);
+
+        if (resoult.affectedRows === 0) {
+            res.status(404).json({success: false, error: 'Product not found'});
+        }
+        else {
+            res.status(200).json({success: true, data: resoult});
+        }
+    }
+    catch (error) {
+        res.status(500).json({success: false, error: error.message});
+    }
 }
+
 
 module.exports = { 
     getAllProducts,
