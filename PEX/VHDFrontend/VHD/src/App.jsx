@@ -3,6 +3,7 @@ import './App.css'
 import ProductList from './components/productList'
 import AddProductForm from './components/AddProductForm'
 import EditProductForm from './components/EditProductForm'
+import DeleteProductForm from './components/DeleteProductForm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
       <ProductList />
       <AddProductForm />
       <EditProductForm />
+      <DeleteProductForm />
     </>
   )
 }
