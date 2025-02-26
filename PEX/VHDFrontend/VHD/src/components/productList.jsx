@@ -22,7 +22,7 @@ function ProductList() {
             <h1>Products</h1>
             <ul>
                 {products.map((product) => (
-                    <li key={product.ProductId}> {product.ProductName} - ${product.ProductPrice} - Product ID:{product.ProductId}</li>
+                    <li key={product.ProductID}> {product.ProductName} - ${product.ProductPrice} - Product ID:{product.ProductID}</li>
                 ))}
             </ul>
         </div>
