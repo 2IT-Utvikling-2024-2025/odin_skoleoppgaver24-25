@@ -1,5 +1,5 @@
 const express = require('express');
-const {pool} = require('../data/db');
+const { pool } = require('../data/db');
 
 //GET
 const getAllProducts = async(req, res) => {
@@ -34,8 +34,8 @@ const getProductByName = async (req, res) => {
 const createProduct = async(req, res) => {
     try {
         const [resoult] = await pool.execute(
-            'INSERT INTO products (ProductName, Price) VALUES (?, ?)',
-            [req.body.name, req.body.price])
+            'INSERT INTO products (Price, productName) VALUES (?, ?)',
+            [req.body.price, req.body.name])
 
         res.status(200).json({success: true, data: resoult});
     }
@@ -48,8 +48,8 @@ const createProduct = async(req, res) => {
 const updateProduct = async(req, res) => {
     try {
         const [resoult] = await pool.execute(
-            'UPDATE products SET ProductName = ?, Price = ? WHERE ProductID = ?',
-            [req.body.name, req.body.price, req.params.id]);
+            'UPDATE products SET WHERE ProductID = ?, Price = ?, ProductName = ?',
+            [req.params.id, req.body.price, req.body.name, ]);
 
         if (resoult.affectedRows === 0) {
             res.status(404).json({success: false, error: 'Product not found'});
@@ -67,7 +67,7 @@ const updateProduct = async(req, res) => {
 const deleteProduct = async(req, res) => {
     try {
         const [resoult] = await pool.execute(
-            'DELETE FROM products WHERE ProductID = ?',
+            'DELETE FROM products WHERE productID = ?',
             [req.params.id]);
 
         if (resoult.affectedRows === 0) {
@@ -86,8 +86,6 @@ const deleteProduct = async(req, res) => {
 module.exports = { 
     getAllProducts,
     getProductByName,
-    getAllOrders,
-    getOrderById,
     createProduct,
     updateProduct,
     deleteProduct

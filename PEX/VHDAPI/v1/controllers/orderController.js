@@ -1,10 +1,10 @@
 const express = require('express');
-const {pool} = require('../data/db');
+const { pool } = require('../data/db');
 
 //GET
 const getAllOrders = async(req, res) => {
     try {
-        const [resoult] = await pool.execute('SELECT * FROM prodctdetail');
+        const [resoult] = await pool.execute('SELECT * FROM `order`');
 
         res.status(200).json({success: true, data: resoult});
     }
@@ -17,8 +17,8 @@ const getAllOrders = async(req, res) => {
 const getOrderById = async (req, res) => {
     try {
     const [resoult] = await pool.execute(
-        'SELECT * FROM productsdetail WHERE productDetailID = ?',
-        [req.params.name]);
+        'SELECT * FROM `order` WHERE orderID = ?',
+        [req.params.id]);
 
         res.status(200).json({success: true, data: resoult});
     }
@@ -30,17 +30,19 @@ const getOrderById = async (req, res) => {
 
 const createOrder = async(req, res) => {
     try {
-    Const [resoult1] = await pool.execute(
-         'INSERT INTO products (OrderID, OrderDate, customer_CustomerID) VALUES (?, ?, ?)',
-            [req.body.OrderID, req.body.OrderDate, req.body.customer_CustomerID]);
-
-     Const [resoult2] = await pool.execute(
-         'INSERT INTO productsDetail (ProductDetailID, ) VALUES (?, ?)',
-            [req.body.ProductDetailID, req.body.ProductID]);
+    const [resoult1] = await pool.execute(
+         'INSERT INTO `order` (orderID, productID, customerID, orderDate) VALUES (?, ?, ?,?)',
+            [req.body.orderID, req.body.productID, req.body.customerID, req.body.orderDate]);
      
      res.status(200).json({success: true, data: resoult1});
     }
     catch (error) {
         res.status(500).json({success: false, error: error.message});
     }
+}
+
+module.exports = {
+    getAllOrders,
+    getOrderById,
+    createOrder
 }
