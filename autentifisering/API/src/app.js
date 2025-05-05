@@ -12,6 +12,7 @@ app.use(express.json());
 
 //Routes
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/dash', require('./v1/routes/dashRoutes'));
 
 //Start server
 app.listen(3000, () => {

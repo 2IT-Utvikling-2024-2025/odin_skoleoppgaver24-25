@@ -10,7 +10,10 @@ const register = async (req, res) => {
     const {username, password, role} = req.body;
     
     try {
+
+        const hashedPassword = await bcrypt.hash(password, 10);
         const [resoult] = await pool.query("INSERT INTO users (user_name, password, role) VALUES (?, ?, ?)", [username, hashedPassword, role]);
+        
         
         res.status(201).json({
             id: resoult.insertId,
