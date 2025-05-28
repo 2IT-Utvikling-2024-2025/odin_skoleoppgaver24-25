@@ -27,22 +27,27 @@ function AddProductForm() {
             console.error(error);
         }
     };
+
     return (
-        <div>
-            <h1>Add Product</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Name:
-                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-                </label>
-                <label>
-                    Price:
-                    <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} />
-                </label>
-                <button type="submit">Add Product</button>
-            </form>
-           {Message && <p>{Message}</p>}
-        </div>
+        <form onSubmit={handleSubmit}>
+            <h2>Add Product</h2>
+            <label htmlFor="product-name">Name:</label>
+            <input
+                id="product-name"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+            />
+            <label htmlFor="product-price">Price:</label>
+            <input
+                id="product-price"
+                type="number"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+            />
+            <button type="submit">Add Product</button>
+            {Message && <p>{Message}</p>}
+        </form>
     );
 }
 
